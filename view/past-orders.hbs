@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">View Past Orders</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Order Number</th>
+            <th>Order Placed</th>
+            <th>Total</th>
+            <th>Products</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each orders}}
+          <tr>
+            <td><a href="/orders/{{orderId}}">{{orderId}}</a></td>
+            <td>{{dataValues.formattedDate}}</td>
+            <td>{{dataValues.orderTotal}}</td>
+            <td>{{dataValues.itemCount}}</td>
+          </tr>
+          {{else}}
+            <td>You have not placed any orders</td>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
