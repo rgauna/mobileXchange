@@ -8,7 +8,7 @@ USE DATABASE mobileXchange;
 CREATE TABLE buying (
     id INTEGER NOT NULL AUTO_INCREMENT,
     phone_name VARCHAR(100) NOT NULL,
-    describe TEXT NOT NULL,
+    describes TEXT NOT NULL,
     total_price INTEGER NOT NULL,
     PRIMARY KEY (id)
 );

@@ -12,4 +12,4 @@ INSERT INTO buying (phone_name, describe, total_price) VALUES ("Google Pixel 3",
 INSERT INTO buying (phone_name, describe, total_price) VALUES ("Google Pixel 2", "Google Pixel 2 smartphone comes with a 5-inch touchscreen display with a resolution of 1080 * 1920 pixels. The phone is powered by 1.9GHz octa-core Qualcomm Snapdragon 835 processor clubbed with 4GB RAM.", 530);
 
 
-INSERT INTO selling (phoneName, descriptions, selling_price) VALUES ();
+INSERT INTO selling (phoneName, descriptions, selling_price) VALUES ("Iphone 10", "Slightly used but still works. No cracks or breaks", 600);
