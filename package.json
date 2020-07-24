@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/rgauna/mobileXchange/issues"
   },
-  "homepage": "https://github.com/rgauna/mobileXchange#readme"
+  "homepage": "https://github.com/rgauna/mobileXchange#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "http": "0.0.1-security",
+    "mysql": "^2.18.1"
+  }
 }
