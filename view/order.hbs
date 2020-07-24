@@ -1,0 +1,110 @@
+<div class="container">
+  <form method="POST" action="/order/">
+    <div class="row order">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Shipping Information</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="shipping-name">Name</label>
+              <input name="shippingName" class="form-control" id="shipping-name">
+            </div>
+            <div class="form-group">
+              <label for="shipping-address">Address</label>
+              <input name="shippingAddress" class="form-control" id="shipping-address">
+            </div>
+            <div class="form-group">
+              <label for="shipping-city">City</label>
+              <input name="shippingCity" class="form-control"id="shipping-city">
+            </div>
+            <div class="form-group">
+              <label for="shipping-state">State</label>
+              <input name="shippingState" class="form-control"id="shipping-state">
+            </div>
+            <div class="form-group">
+              <label for="shipping-zip">Zip Code</label>
+              <input name="shippingZip" class="form-control" id="shipping-zip">
+            </div>
+            <div class="form-group">
+              <label for="shipping-country">Country</label>
+              <input name="shippingCountry" class="form-control" id="shipping-country">
+            </div>
+            <div class="form-group">
+              <label for="shipping-phone">Phone</label>
+              <input name="shippingPhone" class="form-control" id="shipping-phone">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Billing Information</h3>
+            <input type="checkbox" onclick="setBilling(this.checked);"/> Same as Shipping
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="billing-name">Name</label>
+              <input name="billingName" class="form-control" id="billing-name">
+            </div>
+            <div class="form-group">
+              <label for="billing-address">Address</label>
+              <input name="billingAddress" class="form-control" id="billing-address">
+            </div>
+            <div class="form-group">
+              <label for="billing-city">City</label>
+              <input name="billingCity" class="form-control" id="billing-city">
+            </div>
+            <div class="form-group">
+              <label for="billing-state">State</label>
+              <input name="billingState" class="form-control" id="billing-state">
+            </div>
+            <div class="form-group">
+              <label for="billing-zip">Zip Code</label>
+              <input name="billingZip" class="form-control" id="billing-zip">
+            </div>
+            <div class="form-group">
+              <label for="billing-country">Country</label>
+              <input name="billingCountry" class="form-control" id="billing-country">
+            </div>
+            <div class="form-group">
+              <label for="billing-phone">Phone</label>
+              <input name="billingPhone" class="form-control" id="billing-phone">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Credit Card Information</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="credit-card-num">Credit Card Num</label>
+              <input name="ccNum" class="form-control" id="create-card-num">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p>Back to <a href="/cart">Shopping Cart</a></p>
+</div>
+
+<script type="text/javascript">
+  function setBilling(checked) {  
+          if (checked) {  
+                    document.getElementById('billing-name').value = document.getElementById('shipping-name').value; 
+                    document.getElementById('billing-address').value = document.getElementById('shipping-address').value;   
+                    document.getElementById('billing-city').value = document.getElementById('shipping-city').value;   
+                    document.getElementById('billing-state').value = document.getElementById('shipping-state').value;   
+                    document.getElementById('billing-zip').value = document.getElementById('shipping-zip').value;   
+                    document.getElementById('billing-country').value = document.getElementById('shipping-country').value;
+                    document.getElementById('billing-phone').value = document.getElementById('shipping-phone').value;   
+          }
+  }
+</script>

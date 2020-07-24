@@ -21,9 +21,13 @@
   },
   "homepage": "https://github.com/rgauna/mobileXchange#readme",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "http": "0.0.1-security",
     "mysql": "^2.18.1"
+=======
+    "bash": "0.0.1"
+>>>>>>> 80f9222a808bd08758d5436f2d17168b1cc2c8d7
   }
 }
