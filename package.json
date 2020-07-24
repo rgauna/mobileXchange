@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rgauna/mobileXchange/issues"
   },
-  "homepage": "https://github.com/rgauna/mobileXchange#readme"
+  "homepage": "https://github.com/rgauna/mobileXchange#readme",
+  "dependencies": {
+    "bash": "0.0.1"
+  }
 }
