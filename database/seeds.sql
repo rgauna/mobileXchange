@@ -1,4 +1,15 @@
-INSERT INTO buying (phone_name, describe, total_price) VALUES ();
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Iphone 11 pro max", "The iPhone 11 Pro and iPhone 11 Pro Max use a Super Retina XDR display.", 1150);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Iphone XR", "6.1-inch (diagonal) all-screen LCD Multi-Touch display with IPS technology", 750);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Iphone XS max", "6.50-inch touchscreen display with a resolution of 1242x2688 pixels at a pixel density of 458 pixels per inch (ppi).", 700);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Iphone X", "The iPhone X was Apple's flagship 10th anniversary iPhone featuring a 5.8-inch OLED display, facial recognition and 3D camera functionality, a glass body, and an A11 Bionic processor." 600);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Iphone 8", "The iPhone 8 features a 4.7-inch display with a resolution of 1334 by 750 with 326 pixels per inch and a 1400:1 contrast ratio", 500);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Samsung Galaxy Fold", "A stunning 7.3-inch Dynamic AMOLED display that defies expectations. Made of a revolutionary polymer material layered for slim flexibility", 1400);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Samsung Galaxy S10", "The Galaxy S10 is a fitting 10th anniversary phone for Samsung and its storied S series. It delivers on change with a novel-looking Infinity-O screen so large it displaces the front camera, and a triple-lens rear camera that takes ultra-wide photos.", 1100)
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Samsung Galaxy S9", "The Samsung Galaxy S9 is a smartphone that was tested with the Android 8.0. 0 operating system. This model weighs 5.6 ounces, has a 5.8 inch touch screen display, 12-megapixel main camera, and 8-megapixel selfie camera.", 950);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Samsung Galaxy S8", "The S8 features an octa-core Exynos 8895 system-on-chip and 4 GB of RAM", 750);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Google Pixel 4", "The Pixel 4 was designed to be Google's best and most impressive Pixel yet. It has an all-new 90Hz display, Motion Sense hand gestures, powerful face unlock, and dual rear cameras.", 815);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Google Pixel 3", "It has a 5.5-inch FHD+ display with the 18:9 aspect ratio. Powering the phone is a Snapdragon 845 processor. The phone has 4GB of RAM and comes in 64GB and 128GB internal storage", 700);
+INSERT INTO buying (phone_name, describe, total_price) VALUES ("Google Pixel 2", "Google Pixel 2 smartphone comes with a 5-inch touchscreen display with a resolution of 1080 * 1920 pixels. The phone is powered by 1.9GHz octa-core Qualcomm Snapdragon 835 processor clubbed with 4GB RAM.", 530);
 
 
 INSERT INTO selling (phoneName, descriptions, selling_price) VALUES ();
