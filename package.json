@@ -1,7 +1,7 @@
 {
-  "name": "mobilexchange",
+  "name": "clear",
   "version": "1.0.0",
-  "description": "mobile site for sell and buy",
+  "description": "test",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,23 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/rgauna/mobileXchange.git"
   },
-  "keywords": [
-    "mobile"
-  ],
-  "author": "rudy guana, leonard esere, joseph arocha",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rgauna/mobileXchange/issues"
   },
   "homepage": "https://github.com/rgauna/mobileXchange#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "http": "0.0.1-security",
-    "mysql": "^2.18.1"
-=======
-    "bash": "0.0.1"
->>>>>>> 80f9222a808bd08758d5436f2d17168b1cc2c8d7
+    "express": "^4.17.1"
   }
 }
