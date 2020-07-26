@@ -9,7 +9,7 @@ CREATE TABLE buying (
     id INTEGER NOT NULL AUTO_INCREMENT,
     phone_name VARCHAR(100) NOT NULL,
     describes TEXT NOT NULL,
-    total_price INTEGER NOT NULL,
+    total_price DECIMAL (4, 2) NOT NULL,
     PRIMARY KEY (id)
 );
 --Table for selling cell phones--
@@ -17,6 +17,6 @@ CREATE TABLE selling (
     id INTEGER NOT NULL AUTO_INCREMENT,
     phoneName VARCHAR(100) NOT NULL,
     descriptions TEXT NOT NULL,
-    selling_price INTEGER NOT NULL,
+    selling_price DECIMAL (4, 2) NOT NULL,
     PRIMARY KEY (id)
 );
