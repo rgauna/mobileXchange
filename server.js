@@ -14,6 +14,7 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
+app.set("view engine", "handlebars");
 
 require("./routes/buy-api-routes.js")(app);
 require("./routes/html-routes")(app);
