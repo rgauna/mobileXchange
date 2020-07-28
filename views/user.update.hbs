@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <h2>Update Account Information</h2>
+      <form method="POST" action="/users/{{userInfo.id}}?_method=PUT">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input class="form-control" type="text" id="firstName" name="firstName" 
+          value={{userInfo.firstName}}>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input class="form-control" type="text" id="lastName" name="lastName" value={{userInfo.lastName}}>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input class="form-control" type="text" id="email" name="email" value={{userInfo.email}}>
+        </div>
+        <input class="btn btn-primary" type=Submit value="Save">
+        <a class="btn btn-secondary" href="/products">Cancel</a>
+      </form>
+
+    </div>
+  </div>
+</div>

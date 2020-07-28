@@ -20,10 +20,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-
     "http": "0.0.1-security",
-    "mysql": "^2.18.1"
-    "path": "^0.12.7",
+    "mysql": "^2.18.1",
     "sequelize": "^4.41.2"
 
   }
