@@ -1,6 +1,7 @@
 const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
+var db = require("./models");
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 // Parse application body as JSON
@@ -13,12 +14,15 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
-app.set("view engine", "handlebars");
-// Import routes and give the server access to them.
-const routes = require("./controllers/phonecontroller.js");
 
-app.use(routes);
+require("./routes/buy-api-routes.js")(app);
+require("./routes/html-routes")(app);
+require("./routes/sell-api-routes")(app);
 // Start our server so that it can begin listening to client requests.
-app.listen(process.env.PORT || 8080, function () {
-    console.log("Server listening on: http://localhost:" + PORT);
+db.sequelize.sync({
+    force: true
+}).then(() => {
+    app.listen(process.env.PORT || 8080, function () {
+        console.log("Server listening on: http://localhost:" + PORT);
+    });
 });
