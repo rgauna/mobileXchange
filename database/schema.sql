@@ -10,6 +10,7 @@ CREATE TABLE buying (
     phone_name VARCHAR(100) NOT NULL,
     describes TEXT NOT NULL,
     total_price DECIMAL (4, 2) NOT NULL,
+    img_src VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
 );
 --Table for selling cell phones--

@@ -1,0 +1,1 @@
+module.exports = "sk_test_tZvDLzJntYjkd2qsdDLBC7OB";

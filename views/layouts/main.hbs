@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>E-Commerce App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+  </head>
+  <body>
+    {{> navbar this}}
+    {{{ body }}}
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    //script for intro graphic
+    console.log(document.referrer);
+    if (document.referrer.indexOf(location.protocol + "//" + location.host) !== 0){
+      $('.intro').show();
+    }
+    $('.intro').on('click', function(){
+      $(this).hide();
+    });
+  </script>
+</html>
