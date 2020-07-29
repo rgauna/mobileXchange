@@ -13,10 +13,10 @@ if (config.use_env_variable) {
     var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-sequelize.authenticate()
-    .then(() => {
-        console.log('connected to DB');
-    });
+// sequelize.authenticate()
+//     .then(() => {
+//         console.log('connected to DB');
+//     });
 
 // var model = sequelize["import"];
 fs //reads directory and filter throw the js files in the model folder.
@@ -30,9 +30,11 @@ fs //reads directory and filter throw the js files in the model folder.
     });
 // associate the models
 Object.keys(db).forEach(function (modelName) {
+    console.log("modelName", modelName)
     if (db[modelName].associate) {
         db[modelName].associate(db);
     }
+
 });
 
 db.sequelize = sequelize;

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Sell = sequelize.define("selling", {
+    var Sell = sequelize.define("Sell", {
         phoneName: {
             type: DataTypes.STRING,
             allowNull: false,
