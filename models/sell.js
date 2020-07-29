@@ -15,10 +15,8 @@ module.exports = function (sequelize, DataTypes) {
         selling_price: {
             type: DataTypes.DECIMAL(4, 2),
             allowNull: false,
-            len: [1]
+            isDecimal: true
         }
     });
-
-
     return Sell;
 };

@@ -1,7 +1,9 @@
 var db = require("../models");
-
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = (app) => {
+
     app.get("/api/selling", (req, res) => {
+        res.render("sell");
         db.selling.findAll({
             include: [db.Post]
         }).then((dbSelling) => {
