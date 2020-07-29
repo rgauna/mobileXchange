@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    var Buy = sequelize.define("buying", {
+    var Buy = sequelize.define("Buy", {
         phone_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -16,7 +16,15 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL(4, 2),
             allowNull: false,
             isDecimal: true
+        },
+        img_src: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            len: [1]
         }
+
+    }, {
+        timestamps: false
     });
     return Buy;
 };
