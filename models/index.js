@@ -13,12 +13,6 @@ if (config.use_env_variable) {
     var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-// sequelize.authenticate()
-//     .then(() => {
-//         console.log('connected to DB');
-//     });
-
-// var model = sequelize["import"];
 fs //reads directory and filter throw the js files in the model folder.
     .readdirSync(__dirname)
     .filter(function (file) {
