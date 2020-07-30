@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 :root {
-  --primary-color: #568c9b;
+  --primary-color: #868888;
   --primary-hover-color: #64a5b7;
   --bg-color: #333;
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
@@ -102,7 +102,7 @@ header.inner {
 
 /* Buttons */
 .btn {
-  color: #fff;
+  color: rgb(0, 128, 74);
   padding: 0.6rem;
   border: 1px solid #ccc;
   transition: all 0.7s;
@@ -116,6 +116,7 @@ header.inner {
 
 .btn-reverse {
   background: var(--primary-color);
+  color: #fff;
   border: 1px solid var(--primary-color);
 }
 
@@ -126,7 +127,6 @@ header.inner {
 
 /* Home Search */
 .search-wrap {
-  background: url('../img/125268main_image_feature_388_ys_full.jpg') no-repeat center center fixed / cover;
   height: 100vh;
   width: 100%;
   padding: 1.3rem 3rem;
@@ -240,6 +240,19 @@ input[type='search'] {
 .form-wrap {
   margin: auto;
   background:#333;
+  opacity: 0.7 ;
+  color: #fff;
+  padding: 1rem 3rem 3rem;
+  margin-top: 3rem;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+  
+}
+
+.login-wrap {
+  margin: auto;
+  background:#333;
+  opacity: 0.7 ;
   color: #fff;
   padding: 1rem 3rem 3rem;
   margin-top: 3rem;
@@ -247,10 +260,25 @@ input[type='search'] {
   box-shadow: var(--box-shadow);
 }
 
+.signup-wrap {
+  margin: auto;
+  background:#333;
+  opacity: 0.7 ;
+  color: #fff;
+  padding: 1rem 3rem 3rem;
+  margin-top: 3rem;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+
+
+
 .form-wrap.reg-form,
 .form-wrap.login-form {
   width: 60%;
 }
+
 
 .form-wrap h1,
 .form-wrap h2,
