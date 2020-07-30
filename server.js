@@ -14,7 +14,7 @@ var db = require("./models");
 //   email => users.find(user => user.email === email),
 //   id => users.find(user => user.id === id)
 // )
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(session({ secret: "my password", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 
 
@@ -105,7 +105,7 @@ app.set("view engine", "handlebars");
 require("./routes/buy-api-routes.js")(app);
 require("./routes/html-routes")(app);
 require("./routes/sell-api-routes")(app);
-require("./routes/login-HTMLroutes")(app);
+// require("./routes/login-HTMLroutes")(app);
 require("./routes/login-api-routes")(app);
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync({
