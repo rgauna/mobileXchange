@@ -19,7 +19,7 @@ app.set("view engine", "handlebars");
 require("./routes/buy-api-routes.js")(app);
 require("./routes/html-routes")(app);
 require("./routes/sell-api-routes")(app);
-require("./routes/login-HTMLroutes")(app);
+require("./routes/HTMLroutes")(app);
 require("./routes/login-api-routes")(app);
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync({
