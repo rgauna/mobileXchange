@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <script type="text/javascript" src="assets/js/members.js"></script>
+    <script type="text/javascript" src="assets/js/signup.js"></script>
+    <script type="text/javascript" src="assets/js/sell.js"></script>
+
+
+    <title> signup </title>
+</head>
+
+<body>
+
+    <div class="container">
+        <section id="search" class="search-wrap signup-wrap">
+            <h2>Create Account</h2>
+            <form method="POST" action="/signup">
+                <div class="form-group">
+                    <label class="control-label" for="firstName">First Name</label>
+                    <input class="form-control" name="firstName" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="lastName">Last Name</label>
+                    <input name="lastName" class="form-control" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="email">Email</label>
+                    <input name="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="pwd">Password</label>
+                    <input name="pwd" class="form-control" type="password" id="pwd" pattern="[a-zA-Z0-9]{5,}"
+                        title="Password must include at least 5 letters/numbers" required>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+            </form>
+            <p>Back to <a href="/login">Login</a></p>
+        </section>
+    </div>
+</body>
+
+</html>

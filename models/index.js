@@ -1,3 +1,4 @@
+'use strict';
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
@@ -30,7 +31,7 @@ fs //reads directory and filter throw the js files in the model folder.
     });
 // associate the models
 Object.keys(db).forEach(function (modelName) {
-    console.log("modelName", modelName)
+
     if (db[modelName].associate) {
         db[modelName].associate(db);
     }
