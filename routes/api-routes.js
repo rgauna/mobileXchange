@@ -1,6 +1,6 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
-var passport = require("passport");
+var passport = require("../config/passport");
 
 module.exports = function (app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -15,6 +15,8 @@ module.exports = function (app) {
     // otherwise send back an error
     app.post("/api/signup", function (req, res) {
         db.User.create({
+                // fName: req.body.fName,
+                // lName: req.body.lName,
                 email: req.body.email,
                 password: req.body.password
             })
@@ -41,9 +43,12 @@ module.exports = function (app) {
             // Otherwise send back the user's email and id
             // Sending back a password, even a hashed password, isn't a good idea
             res.json({
+
                 email: req.user.email,
                 id: req.user.id
             });
         }
+
     });
+
 };

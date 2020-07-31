@@ -3,9 +3,9 @@ var db = require("../models");
 module.exports = (app) => {
     app.get("/api/Buy", (req, res) => {
         db.Buy.findAll({
-            include: [{
-                all: true
-            }]
+            // include: [{
+            //     all: true
+            // }]
         }).then((dbBuy) => {
             res.json(dbBuy);
         });
@@ -16,7 +16,7 @@ module.exports = (app) => {
             where: {
                 id: req.params.id
             },
-            include: [db.Post]
+            // include: [db.Buy]
         }).then((dbBuy) => {
             res.json(dbBuy);
         });

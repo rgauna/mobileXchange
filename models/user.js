@@ -4,6 +4,17 @@ var bcrypt = require("bcryptjs");
 module.exports = (sequelize, DataTypes) => {
     var User = sequelize.define("User", {
         // The email cannot be null, and must be a proper email before creation
+        // fName: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     unique: true
+        // },
+
+        // lName: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     unique: true
+        // },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -17,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         }
+
     });
     // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
     User.prototype.validPassword = function (password) {
@@ -27,5 +39,6 @@ module.exports = (sequelize, DataTypes) => {
     User.addHook("beforeCreate", function (user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
+
     return User;
 };

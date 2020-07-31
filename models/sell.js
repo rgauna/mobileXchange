@@ -18,5 +18,13 @@ module.exports = function (sequelize, DataTypes) {
             isDecimal: true
         }
     });
+
+    Sell.associate = (models) => {
+        Sell.belongsTo(models.Buy, {
+            foreingKey: {
+                allowNull: false
+            }
+        });
+    };
     return Sell;
 };

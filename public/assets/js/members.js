@@ -5,8 +5,8 @@ $(document).ready(function () {
         $(".member-name").text(data.email);
     });
 
-    $.get("/api/Buy").then(function (data) {
-        console.log(data)
+    // $.get("/api/Buy").then(function (data) {
+    //     console.log(data)
 
-    });
+    // });
 });

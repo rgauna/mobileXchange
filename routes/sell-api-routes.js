@@ -5,7 +5,7 @@ module.exports = (app) => {
     app.get("/api/selling", (req, res) => {
         res.render("sell");
         db.selling.findAll({
-            include: [db.Post]
+            // include: [db.Post]
         }).then((dbSelling) => {
             res.json(dbSelling);
         });
@@ -16,7 +16,7 @@ module.exports = (app) => {
             where: {
                 id: req.params.id
             },
-            include: [db.Post]
+            // include: [db.Post]
         }).then((dbSelling) => {
             res.json(dbSelling);
         });
