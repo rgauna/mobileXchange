@@ -33,6 +33,8 @@ $(document).ready(function () {
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
             .catch(handleLoginErr);
+        console.log("email", email);
+        console.log("password", password);
     }
 
     function handleLoginErr(err) {
