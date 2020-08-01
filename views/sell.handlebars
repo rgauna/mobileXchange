@@ -32,7 +32,13 @@
        <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
        <p><img id="output" width="200" /></p>  
 
-        <input type="submit" value="Post Your Phone for Sale" class="btn btn-reverse">
+        <input type="submit" value="Post Your Phone for Sale" onclick=sellAlert() "btn btn-reverse">
+            <script>
+                                    function sellAlert() {
+                                      alert("Thank for your submission, it will be posted upon review and approval.");
+                                    }
+                                    </script>
+                              </div>
       </form>
     </div>
   </section>
