@@ -43,7 +43,7 @@ $.get("/api/Sell", (data) => {
 		sellSection.attr("id", "phone_Sell-" + i);
 		$("#phone-section").append(sellSection);
 
-		$("#phone_Sell-" + i).append("<h4>" + data[i].phone_make + "<h4>");
+		$("#phone_Sell-" + i).append("<h4>" + data[i].phone_make + "</h4>");
 		$("#phone_Sell-" + i).append("<h4>" + data[i].models + "<h4>");
 		$("#phone_Sell-" + i).append("<h4>" + data[i].asking_price + "<h4>");
 		$("#phone_Sell-" + i).append("<p>" + data[i].description + "<p>");
