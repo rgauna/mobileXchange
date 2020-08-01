@@ -24,7 +24,6 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-// require("./routes/buy-api-routes.js")(app);
 require("./routes/HTMLroutes")(app);
 require("./routes/sell-api-routes")(app);
 require("./routes/api-routes")(app);
