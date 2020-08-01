@@ -1,38 +1,45 @@
 var db = require("../models");
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = (app) => {
 
-    app.get("/api/selling", (req, res) => {
-        res.render("sell");
-        db.selling.findAll({
-            // include: [db.Post]
-        }).then((dbSelling) => {
-            res.json(dbSelling);
+    app.get("/api/Sell", (req, res) => {
+        console.log("handling git request for /api/sell");
+        db.Sell.findAll({}).then((dbSell) => {
+            res.json(dbSell);
         });
     });
 
-    app.get("/api/selling/:id", (req, res) => {
-        db.selling.findOne({
+    app.get("/api/Sell/:id", (req, res) => {
+        db.Sell.findOne({
             where: {
                 id: req.params.id
             },
             // include: [db.Post]
-        }).then((dbSelling) => {
-            res.json(dbSelling);
+        }).then((dbSell) => {
+            res.json(dbSell);
         });
     });
-    app.post("/api/buying", (req, res) => {
-        db.buying.create(req.body).then((dbBuying) => {
-            res.json(dbBuying);
+
+    app.post("/api/Sell", (req, res) => {
+        console.log("handeling post request for / api Sell");
+        console.log(req.body);
+        db.Sell.create({
+            phone_make: req.body.make,
+            models: req.body.model,
+            asking_price: req.body.price,
+            description: req.body.description,
+            email: req.body.email
+        }).then((dbSell) => {
+            res.json(dbSell);
         });
     });
-    app.delete("/api/buying/:id", (req, res) => {
-        db.buying.destroy({
+    app.delete("/api/Sell/:id", (req, res) => {
+        db.Sell.destroy({
             where: {
                 id: req.params.id
             }
-        }).then((dbBuying) => {
-            res.json(dbBuying);
+        }).then((dbSell) => {
+            res.json(dbSell);
         });
     });
 };

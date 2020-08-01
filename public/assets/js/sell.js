@@ -1,4 +1,81 @@
-var loadFile = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-};
+$(document).ready(function () {
+
+	var phoneSellForm = $("form.sell");
+	var makeInput = $("input#make");
+	var modelInput = $("input#model");
+	var priceInput = $("input#price");
+	var descriptionInput = $("textarea#description");
+	var email = $("input#email")
+
+	phoneSellForm.on("submit", function (event) {
+		event.preventDefault();
+		var userData = {
+			make: makeInput.val().trim(),
+			model: modelInput.val().trim(),
+			price: priceInput.val().trim(),
+			description: descriptionInput.val().trim(),
+			email: email.val().trim(),
+		};
+		console.log("phone sell", userData);
+		postPhone(userData);
+	});
+
+	function postPhone(userData) {
+		$.post("/api/Sell", userData)
+			.then(function (data) {
+				window.location.replace("/members");
+				// If there's an error, handle it by throwing up a bootstrap alert
+			})
+			.catch(handleLoginErr);
+	};
+
+	function handleLoginErr(err) {
+		$("#alert .msg").text(err.responseJSON);
+		$("#alert").fadeIn(500);
+	}
+
+});
+
+$.get("/api/Sell", (data) => {
+	for (var i = 0; i < data.length; i++) {
+		var sellSection = $("<div>");
+		sellSection.addClass("Selling");
+		sellSection.attr("id", "phone_Sell-" + i);
+		$("#phone-section").append(sellSection);
+
+		$("#phone_Sell-" + i).append("<h4>" + data[i].phone_make + "<h4>");
+		$("#phone_Sell-" + i).append("<h4>" + data[i].models + "<h4>");
+		$("#phone_Sell-" + i).append("<h4>" + data[i].asking_price + "<h4>");
+		$("#phone_Sell-" + i).append("<p>" + data[i].description + "<p>");
+		$("#phone_Sell-" + i).append("<h4>" + data[i].email + "<h4>");
+	}
+});
+
+
+// // When the user clicks post phone
+// $("#post").on("click", (event) => {
+// 	event.preventDefault();
+// 	// Creating phone to sell
+// 	var Sell = {
+// 		make: $("#make").val().trim(),
+// 		model: $("#model").val().trim(),
+// 		price: $("#price").val().trim(),
+// 		description: $("#description").val().trim(),
+// 		email: $("#email").val().trim(),
+// 		image: $("phone_img").val().trim(),
+// 	};
+// 	// Send ajax post with jquery
+// 	$.post("/api/Sell", Sell)
+// 		.then((data) => {
+// 			console.log("data", data);
+// 			alert("Thank you for posting your phone")
+// 		});
+// 	// Make input boxes empty after post button
+// 	$("#make").val("");
+// 	$("#model").val("");
+// 	$("#price").val("");
+// 	$("#description").val("");
+// 	$("#email").val("");
+// 	$("#phone_img").val("");
+// 	console.log("sell", Sell)
+// });
