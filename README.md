@@ -23,6 +23,10 @@ Once the users profile is created they will be directed to a webpage that displa
 The user can also click a link that will direct them to another page for selling a phone.
 Here the user can add information about the phone they will like to sell, when the user clicks "post your phone for sale" button, they will be redirected to the members page where the information the submitted is displayed. If the user chooses to click the log out link, the user will be directed back to the sign up page.
 
+## Heroku link
+
+https://shielded-plains-17378.herokuapp.com/
+
 ## Credits
 
 There were 3 collaborators that were involved in this project.
