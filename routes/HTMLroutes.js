@@ -25,13 +25,6 @@ module.exports = function (app) {
 
     app.get("/members", isAuthenticated, function (req, res) {
         res.sendFile(path.join(__dirname, "../public/members.html"));
-        // db.Buy.create("Buy", req, function (res) {
-        //     req(res);
-        // }).then((dbBuy) => {
-        //     res.render("members")
-        // }).catch((err) => {
-        //     console.log("Error", err);
-        // });
 
     });
 
@@ -39,9 +32,4 @@ module.exports = function (app) {
         res.render("sell")
 
     });
-    app.get("/confirmbuy", function (req, res) {
-        res.render("confirmbuy")
-
-    });
-
 };
