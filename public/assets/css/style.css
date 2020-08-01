@@ -12,25 +12,6 @@
 }
 
 body {
-  /* font-family: 'Lato', sans-serif;
-  margin: 0;
-  color: #fff;
-  background:url("../img/125268main_image_feature_388_ys_full.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
- background-attachment: fixed;
- background-size: cover;
- background-position: top;
- background-image:url(https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
- width: 100%;
- height: 100%;
- font-family: Arial, Helvetica;
- letter-spacing: 0.02em;
-  font-weight: 400;
- -webkit-font-smoothing: antialiased;  */
 
  background: url(https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -39,6 +20,8 @@ body {
   background-size: cover;
 
 }
+
+
 
 ul {
   list-style: none;
@@ -267,8 +250,9 @@ input[type='search'] {
 }
 
 .img{
-  max-width:100%;
-  object-fit: scale-down;
+  width: 100%;
+  height: auto;
+ 
 }
 
 .login-wrap {
@@ -291,6 +275,7 @@ input[type='search'] {
   margin-top: 3rem;
   border-bottom: 4px solid var(--primary-color);
   box-shadow: var(--box-shadow);
+ 
 }
 
 

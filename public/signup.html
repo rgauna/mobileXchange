@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
 
 
 
@@ -16,7 +18,8 @@
 
     <div class="container">
         <section id="search" class="search-wrap signup-wrap">
-            <h2>Create Account</h2>
+            <h1>mobileXchange <i class="fa fa-mobile" aria-hidden="true"></i></h1>
+            <h2>Please Create An Account To Proceed</h2>
             <form class="signup">
                 <div class="form-group">
                     <label class="control-label" for="firstName">First Name</label>
@@ -44,7 +47,52 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/signup.js"></script>
+    <script>
+        var total=40,
+  container=document.getElementById('container'),
+  w=window.innerWidth,
+  h=window.innerHeight,
+  Tweens=[],
+  SPs=1;
+
+
+
+for (var i=total;i--;){ 
+  var Div=document.createElement('div');
+  TweenLite.set(Div,{attr:{class:'dot'},x:R(w),y:R(h),opacity:0});
+  container.appendChild(Div);   Anim(Div);  Tweens.push(Div);
+};
+
+function Anim(elm){ 
+  elm.Tween=TweenLite.to(elm,R(20)+10,{bezier:{values:[{x:R(w),y:R(h)},{x:R(w),y:R(h)}]},opacity:R(1),scale:R(1)+0.5,delay:R(2),onComplete:Anim,onCompleteParams:[elm]})
+};
+
+for(var i=total;i--;){
+  Tweens[i].Tween.play()};
+
+window.addEventListener("resize", resize);
+
+function R(max){return Math.random()*max};
+
+function resize() {
+  
+  w = window.innerWidth;
+  h = window.innerHeight;
+  
+  for (var i = 0; i < total; i++) {
+    
+    var fireFly = Tweens[i];
+
+    TweenLite.killTweensOf(fireFly);
+    
+    Anim(fireFly);
+  }
+}
+    </script>
+    
 
 </body>
+
+
 
 </html>
