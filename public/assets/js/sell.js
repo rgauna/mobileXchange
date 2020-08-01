@@ -50,32 +50,3 @@ $.get("/api/Sell", (data) => {
 		$("#phone_Sell-" + i).append("<h4>" + data[i].email + "<h4>");
 	}
 });
-
-
-// // When the user clicks post phone
-// $("#post").on("click", (event) => {
-// 	event.preventDefault();
-// 	// Creating phone to sell
-// 	var Sell = {
-// 		make: $("#make").val().trim(),
-// 		model: $("#model").val().trim(),
-// 		price: $("#price").val().trim(),
-// 		description: $("#description").val().trim(),
-// 		email: $("#email").val().trim(),
-// 		image: $("phone_img").val().trim(),
-// 	};
-// 	// Send ajax post with jquery
-// 	$.post("/api/Sell", Sell)
-// 		.then((data) => {
-// 			console.log("data", data);
-// 			alert("Thank you for posting your phone")
-// 		});
-// 	// Make input boxes empty after post button
-// 	$("#make").val("");
-// 	$("#model").val("");
-// 	$("#price").val("");
-// 	$("#description").val("");
-// 	$("#email").val("");
-// 	$("#phone_img").val("");
-// 	console.log("sell", Sell)
-// });

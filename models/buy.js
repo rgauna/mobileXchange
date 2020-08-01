@@ -28,11 +28,5 @@
          timestamps: false
      });
 
-
-     //  Buy.associate = (models) => {
-     //      Buy.hasMany(models.Sell, {
-     //          onDelete: "cascade"
-     //      });
-     //  };
      return Buy;
  };
