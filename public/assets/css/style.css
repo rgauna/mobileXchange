@@ -11,9 +11,23 @@
   box-sizing: border-box;
 }
 
+.forSale {
+  margin-top: 100px;
+  width: 100%;
+  height: 800px;
+}
+
+p {
+  font-size: 20px;
+}
+
+#purchaseBtn {
+  background-color: blue;
+}
+
 body {
 
- background: url(https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center center fixed; 
+  background: url(https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,12 +37,15 @@ body {
 
 .card-body {
   display: flex;
- 
+  flex-wrap: wrap;
+  width: 100%;
+  height: 800px;
+
 }
 
 .gradient-border {
   --borderWidth: 3px;
-  background:url(https://cdn.pocket-lint.com/r/s/1200x/assets/images/120810-phones-news-buyer-s-guide-upcoming-smartphones-image1-3aitwvwmok.jpg);
+  background: url(https://cdn.pocket-lint.com/r/s/1200x/assets/images/120810-phones-news-buyer-s-guide-upcoming-smartphones-image1-3aitwvwmok.jpg);
   background-size: cover;
   min-height: 100px;
   min-width: 200px;
@@ -37,6 +54,7 @@ body {
   position: relative;
   border-radius: var(--borderWidth);
 }
+
 .gradient-border:after {
   content: '';
   position: absolute;
@@ -55,15 +73,17 @@ body {
 
 
 @keyframes animatedgradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -198,7 +218,7 @@ header.inner {
 }
 
 /* Everything in the search form */
-.search-form > * {
+.search-form>* {
   border: 0;
   padding: 0 0 0 10px;
   background: #fff;
@@ -221,14 +241,14 @@ input[type='search'] {
   margin-bottom: 1rem;
   box-shadow: var(--box-shadow);
 
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   -webkit-background-size: cover;
-  -moz-background-size:  cover;
+  -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-  
-/* 
+
+  /* 
 
   position: fixed;
   top: -50%;
@@ -243,8 +263,10 @@ input[type='search'] {
   opacity: .9;
   visibility: visible; */
 
-  
-};
+
+}
+
+;
 
 
 
@@ -268,31 +290,31 @@ input[type='search'] {
 /* Form */
 .form-wrap {
   margin: auto;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 1rem 3rem 3rem;
   margin-top: 3rem;
   border-bottom: 4px solid var(--primary-color);
   box-shadow: var(--box-shadow);
-  
-  
+
+
 }
 
 .card-img-top {
-  max-width:100%;
-  height:100%;
+  max-width: 100%;
+  height: 100%;
 }
 
-.img{
-  max-width:100%;
-  height:100%;
+.img {
+  max-width: 100%;
+  height: 100%;
   border-bottom: 4px solid var(--primary-color);
   box-shadow: var(--box-shadow);
 }
 
 .sell-wrap {
   margin: auto;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 1rem 3rem 3rem;
   margin-top: 3rem;
@@ -302,16 +324,16 @@ input[type='search'] {
 
 }
 
-.img{
+.img {
   width: 100%;
   height: auto;
- 
+
 }
 
 .login-wrap {
   margin: auto;
-  background:#333;
-  opacity: 0.7 ;
+  background: #333;
+  opacity: 0.7;
   color: #fff;
   padding: 1rem 3rem 3rem;
   margin-top: 3rem;
@@ -321,14 +343,14 @@ input[type='search'] {
 
 .signup-wrap {
   margin: auto;
-  background:#333;
-  opacity: 0.7 ;
+  background: #333;
+  opacity: 0.7;
   color: #fff;
   padding: 1rem 3rem 3rem;
   margin-top: 3rem;
   border-bottom: 4px solid var(--primary-color);
   box-shadow: var(--box-shadow);
- 
+
 }
 
 
